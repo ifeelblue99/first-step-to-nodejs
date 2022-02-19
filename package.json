@@ -1,0 +1,20 @@
+{
+  "name": "nodejs-basic-server",
+  "version": "1.0.0",
+  "description": "node.js first step",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ifeelblue99/first-step-to-nodejs.git"
+  },
+  "author": "baran cakirbey",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ifeelblue99/first-step-to-nodejs/issues"
+  },
+  "homepage": "https://github.com/ifeelblue99/first-step-to-nodejs#readme"
+}
