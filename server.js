@@ -6,14 +6,25 @@ const server = http.createServer((req, res)=>{
 
     // set header
     res.setHeader("Content-Type", "text/html")
-    
+    // get path
+    let path = "./views";
+    switch (req.url) {
+        case "/":
+            path+="/home.html"
+            break;
+        case "/about":
+            path+="/about.html"
+            break;
+        default:
+            path+="/404.html"
+            break;
+    }
     // send an html file
-    fs.readFile("./views/about.html", (err, data)=>{
+    fs.readFile(path, (err, data)=>{
         if (err) {
-            console.log(err)
+            res.end("<h2>An Error Went Out</h2>")
         }else{
-            res.write(data)
-            res.end()
+            res.end(data)
         }
     })
 
