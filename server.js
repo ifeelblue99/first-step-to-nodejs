@@ -10,13 +10,20 @@ const server = http.createServer((req, res)=>{
     let path = "./views";
     switch (req.url) {
         case "/":
+            path+="/home.html";
+            res.statusCode = 200;
+            break;
+        case "/home":
+            res.statusCode = 200
             path+="/home.html"
             break;
         case "/about":
+            res.statusCode = 200
             path+="/about.html"
             break;
         default:
             path+="/404.html"
+            res.statusCode = 404
             break;
     }
     // send an html file
